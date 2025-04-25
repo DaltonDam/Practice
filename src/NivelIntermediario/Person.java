@@ -10,6 +10,12 @@ public abstract class Person implements Strategy{
     //int minAge = 18;
     int tasks;
     Rank rank;
+    final int id = 0;
+
+
+    final void throwGrenade() {
+        System.out.println("Grenade!!!");
+    }
 
     public Person() {
     }
@@ -41,8 +47,12 @@ public abstract class Person implements Strategy{
         return "Welcome, " + name;
     }
 
-//    public int ageForStalker(int minAgeForStalker) {
-//        return minAge - minAgeForStalker;
-//    }
-
+    @Override
+    public String toString() {
+        return "Name: " + name + "\n" +
+                "Age: " + age + "\n" +
+                "Location: '" + location + "\n" +
+                "Tasks: " + tasks + "\n" +
+                "Rank: " + rank;
+    }
 }
