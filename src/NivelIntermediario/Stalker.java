@@ -2,15 +2,6 @@ package NivelIntermediario;
 
 public class Stalker extends Person implements Artifact, PDA{
 
-    public Stalker() {
-        super();
-    }
-
-    public Stalker(String name, int age, String location) {
-        super(name, age, location);
-    }
-
-    //Sobrecarga
     public Stalker(String name, int age, String location, int tasks, Rank rank) {
         super(name, age, location, tasks, rank);
     }
@@ -21,17 +12,17 @@ public class Stalker extends Person implements Artifact, PDA{
 
     @Override
     public void ArtifactEnable() {
-        System.out.println(name + " is using the artifact.");
+        System.out.println(getName() + " is using the artifact.");
     }
 
     @Override
     public void openPDA() {
-        System.out.println(name + " open PDA.");
+        System.out.println(getName() + " open PDA.");
     }
 
     @Override
     public void sobrecarga() {
-        System.out.println(name + " sobrecarregou um método");
+        System.out.println(getName() + " sobrecarregou um método");
     }
 
 

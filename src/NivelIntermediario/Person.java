@@ -4,13 +4,56 @@ public abstract class Person implements Strategy{
 
     //TODO: adicionar dois novos atributos: rank e tasks
 
-    String name;
-    int age;
-    String location;
-    //int minAge = 18;
-    int tasks;
-    Rank rank;
-    final int id = 0;
+    private String name;
+    private int age;
+    private String location;
+    private int tasks;
+    private Rank rank;
+    private final int id = 0;
+
+    public void setName(String name) {
+        this.name = name;
+    }
+
+    public int getAge() {
+        return age;
+    }
+
+    public void setAge(int age) {
+        this.age = age;
+    }
+
+    public String getLocation() {
+        return location;
+    }
+
+    public void setLocation(String location) {
+        this.location = location;
+    }
+
+    public int getTasks() {
+        return tasks;
+    }
+
+    public void setTasks(int tasks) {
+        this.tasks = tasks;
+    }
+
+    public Rank getRank() {
+        return rank;
+    }
+
+    public void setRank(Rank rank) {
+        this.rank = rank;
+    }
+
+    public int getId() {
+        return id;
+    }
+
+    public String getName() {
+        return name;
+    }
 
 
     final void throwGrenade() {
@@ -20,22 +63,20 @@ public abstract class Person implements Strategy{
     public Person() {
     }
 
-    public Person(String name, int age, String location) {
+    public Person(String name, int age, String location, int tasks, Rank rank) {
         this.name = name;
         this.age = age;
         this.location = location;
-    }
-
-    //TODO: Sobrecarga de construtor
-
-    public Person(String name, int age, String location, int tasks, Rank rank) {
-        this(name, age, location); //Redundância
         this.tasks = tasks;
         this.rank = rank;
     }
 
+    //TODO: Sobrecarga de construtor
+
+
+
     public void attack() {
-        System.out.println(name + " is attacking!");
+        System.out.println(getName() + " is attacking!");
     }
 
     @Override
@@ -44,15 +85,18 @@ public abstract class Person implements Strategy{
     }
 
     public String WelcomeStalker() {
-        return "Welcome, " + name;
+        return "Welcome, " + getName();
     }
 
     @Override
     public String toString() {
-        return "Name: " + name + "\n" +
-                "Age: " + age + "\n" +
-                "Location: '" + location + "\n" +
-                "Tasks: " + tasks + "\n" +
-                "Rank: " + rank;
+        return "Person{" +
+                "name='" + name + '\'' +
+                ", age=" + age +
+                ", location='" + location + '\'' +
+                ", tasks=" + tasks +
+                ", rank=" + rank +
+                ", id=" + id +
+                '}';
     }
 }

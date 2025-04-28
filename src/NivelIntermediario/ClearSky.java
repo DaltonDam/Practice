@@ -8,7 +8,7 @@ public class ClearSky extends Person implements Artifact {
 
     @Override
     public void ArtifactEnable() {
-        System.out.println(name + "is using the artifact.");
+        System.out.println(getName() + "is using the artifact.");
     }
 
     @Override
