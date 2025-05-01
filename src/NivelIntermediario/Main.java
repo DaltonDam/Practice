@@ -1,7 +1,5 @@
 package NivelIntermediario;
 
-import NivelIntermediario.construtores.Missao;
-
 public class Main {
     public static void main(String[] args) {
 
@@ -10,7 +8,8 @@ public class Main {
 
         System.out.println(strelok.getName());
 
-        Missao missao1 = new Missao("Resgatar cachorro", Rank.EXPERT);
+        Missao missao1 = new Missao("Resgatar cachorro", RankDeMissoes.B);
+
 
     }
 }

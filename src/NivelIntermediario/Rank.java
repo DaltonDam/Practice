@@ -6,4 +6,6 @@ public enum Rank {
     EXPERIENCED,
     VETERAN,
     PROFESSIONAL
+
+
 }

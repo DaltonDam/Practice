@@ -2,6 +2,13 @@ package NivelIntermediario;
 
 public class ClearSky extends Person implements Artifact {
 
+    public ClearSky() {
+    }
+
+    public ClearSky(String name, int age, String location, int tasks, Rank rank) {
+        super(name, age, location, tasks, rank);
+    }
+
     public void welcome() {
         System.out.println("I'm from the Clear Sky faction");
     }
