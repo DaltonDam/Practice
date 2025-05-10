@@ -4,6 +4,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class Backpack<T> {
+    
     private List<T> objects;
 
     public Backpack() {
@@ -15,16 +16,15 @@ public class Backpack<T> {
         objects.add(objectT);
     }
 
-    public List<T> getObjects() {
-        return objects;
+    public void showObject() {
+        for (T object : objects) {
+            System.out.println(object);
+        }
     }
 
-    public void setObjects(List<T> objects) {
-        this.objects = objects;
-    }
-
-    @Override
-    public String toString() {
-        return "Backpack" + objects.toString();
+    public void forI() {
+        for (int i = 0; i < objects.size(); i++) {
+            System.out.println(objects);
+        }
     }
 }

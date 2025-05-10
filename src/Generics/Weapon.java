@@ -1,9 +1,13 @@
 package Generics;
 
-public class Inventary {
+public class Weapon {
+
     private String name;
 
-    public Inventary(String name) {
+    public Weapon() {
+    }
+
+    public Weapon(String name) {
         this.name = name;
     }
 
@@ -17,6 +21,8 @@ public class Inventary {
 
     @Override
     public String toString() {
-        return "Inventary" + name;
+        return "Weapon{" +
+                "name='" + name + '\'' +
+                '}';
     }
 }
