@@ -30,7 +30,7 @@ public class Main {
         System.out.println("List: " + list);
 
         //Stack: Pilha, o último a entrar é o primeiro a sair
-        System.out.println("\n--------------- List ---------------\n");
+        System.out.println("\n--------------- Stack ---------------\n");
         Stack<String> stack = new Stack<>();
         stack.push("CJ");
         stack.push("Scar");
